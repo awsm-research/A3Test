@@ -264,7 +264,6 @@ parser.add_argument("-q","--externalTestFileOutput", dest="externalTestFileOutpu
 
 ``python
 python codeGPTTraining.py -i train.csv -o FinalplBartModelDir -s src_fm_fc_ms_ff -t test.csv -v eval.csv -ce 8 -a test.txt -q Defect4jTests.txt
-
 ``
 <details>
            <summary><h3>See Arguments :mag_right:</h3></summary>
