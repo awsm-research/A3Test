@@ -30,6 +30,8 @@ First of all, clone this repository to your local machine and access the main di
 # A3Test
 ## To Train the Assert Augmented model
 
+We use methods2test data to fine-tune the model.
+
 ``python
 python training.py -i train.csv -c codePreTrain.csv -po preModel.pth -o model.pth -s src_fm_fc_ms_ff -t test.csv -v eval.csv -pe 7 -ce 8 -a test.txt -q Defect4jTests.txt
 ``
