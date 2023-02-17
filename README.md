@@ -241,7 +241,7 @@ parser.add_argument("-q","--externalTestFileOutput", dest="externalTestFileOutpu
 </details>
 
 # A3Test
-## To Train the BART model
+## To Train the Assert Augmented model
 
 ``python
 python training.py -i train.csv -c codePreTrain.csv -po preModel.pth -o model.pth -s src_fm_fc_ms_ff -t test.csv -v eval.csv -pe 7 -ce 8 -a test.txt -q Defect4jTests.txt
@@ -269,7 +269,7 @@ parser.add_argument("-q","--externalTestFileOutput", dest="externalTestFileOutpu
 
 
 
-## To Test the BART model
+## To Test the Assert Augmented model
 
 ```python
 python testScript.py -i model.pth -t test.csv -a test.txt -q Defect4jTests.txt
