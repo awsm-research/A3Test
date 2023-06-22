@@ -3,8 +3,9 @@ Developing a BART based model for the unit test cases generation
 
 # Dataset for Train, Eval and Testing
 The datset are added in the Methods2Test Dataset.
-'To extract json content and convert to train.csv, eval.csv and test.csv'
-'python extractContentDataInCsv.py -d ~/UnitTestCaseResearch/methods2test/methods2test-v1.0/dataset/Train -o train.csv
+#### To extract json content and convert to train.csv, eval.csv and test.csv
+
+'python extractContentDataInCsv.py -d ~/UnitTestCaseResearch/methods2test/methods2test-v1.0/dataset/Train -o train.csv'
 
 # How to replicate
 
