@@ -38,29 +38,33 @@ First of all, clone this repository to your local machine and access the main di
 
 We use methods2test data to fine-tune the model.
 
-``python
-python training.py -i train.csv -c codePreTrain.csv -po preModel.pth -o model.pth -s src_fm_fc_ms_ff -t test.csv -v eval.csv -pe 7 -ce 8 -a test.txt -q Defect4jTests.txt
-``
+```python
+python training.py -i train.csv -p enPreTrain.csv -c codePreTrain.csv -eo enModel.pth -po preModel.pth -o model.pth -s src_fm_fc_ms_ff -t test.csv -v eval.csv -e 200 -pe 7 -ce 8 -a test.txt -q Defect4jTests.txt
+```
 <details>
            <summary><h3>See Arguments :mag_right:</h3></summary>
  <p>
    
-``python   
+```python   
 parser.add_argument("-i", "--trainInput", dest="trainInput", help="Training file for the model")
+parser.add_argument("-p", "--enpretrainInput", dest="enpretrainInput", help="English Pre Training file for the model")
 parser.add_argument("-c", "--codepretrainInput", dest="codepretrainInput", help="Code Pre Training file for the model")
 parser.add_argument("-o", "--modelOutputDir", dest="outPath", help="Output Directory Path for the model")
+parser.add_argument("-eo", "--ENmodelOutputDir", dest="EnOutPath", help="English Output Directory Path for the model")
 parser.add_argument("-po", "--premodelOutputDir", dest="PreOutPath", help="Pre Training Output Directory Path for the model")
 parser.add_argument("-s", "--sourceLabel", dest="sourceLabel", help="Source Label for the train.csv file")
 parser.add_argument("-t", "--testInput", dest="testInput", help="Test Input file for the model accuracy")
 parser.add_argument("-v", "--valInput", dest="valInput", help="Val Input file for the model accuracy")
 parser.add_argument("-e", "--epochs", dest="epochs", help="Epochs for the model")
+parser.add_argument("-pe", "--preEnEpochs", dest="preEnEpochs", help="Epochs for the model english pre train")
 parser.add_argument("-ce", "--preCodeEpochs", dest="preCodeEpochs", help="Epochs for the model code pre train")
 parser.add_argument("-a","--externalTestFile", dest="externalTestFile", help="External Test Files for generating the UTs")
 parser.add_argument("-q","--externalTestFileOutput", dest="externalTestFileOutput", help="External Test Files output for generating the UTs")
-
-``
+```
    
 </details>
+
+
 
 
 
